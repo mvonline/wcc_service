@@ -1,0 +1,62 @@
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+  <Reference name="CheckIn" className="oracle.adf.model.connection.webservice.impl.WebServiceConnectionImpl"
+             credentialStoreKey="CheckIn" xmlns="">
+    <Factory className="oracle.adf.model.connection.webservice.api.WebServiceConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="WebServiceConnection">
+        <Contents>
+          <wsconnection description="file:/home/masoud/Downloads/CheckIn (1).wsdl"
+                        service="{http://www.stellent.com/CheckIn/}CheckIn">
+            <model name="{http://www.stellent.com/CheckIn/}CheckIn" xmlns="http://oracle.com/ws/model">
+              <service name="{http://www.stellent.com/CheckIn/}CheckIn">
+                <port name="CheckInSoap" binding="{http://www.stellent.com/CheckIn/}CheckInSoap"
+                      portType="{http://www.stellent.com/CheckIn/}CheckInSoap">
+                  <soap username="transportUserName" password="transportPassword"
+                        addressUrl="http://192.168.1.158:16200/_dav/cs/idcplg"
+                        xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                  <operation name="CheckInUniversal">
+                    <soap soapAction="http://www.stellent.com/CheckIn/" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="CheckOut">
+                    <soap soapAction="http://www.stellent.com/CheckIn/" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="CheckOutByName">
+                    <soap soapAction="http://www.stellent.com/CheckIn/" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="UndoCheckOut">
+                    <soap soapAction="http://www.stellent.com/CheckIn/" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="UndoCheckOutByName">
+                    <soap soapAction="http://www.stellent.com/CheckIn/" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="UpdateDocInfo">
+                    <soap soapAction="http://www.stellent.com/CheckIn/" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="CheckInList">
+                    <soap soapAction="http://www.stellent.com/CheckIn/" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                </port>
+              </service>
+            </model>
+          </wsconnection>
+        </Contents>
+      </XmlRefAddr>
+      <SecureRefAddr addrType="transportPassword"/>
+      <SecureRefAddr addrType="transportUserName"/>
+    </RefAddresses>
+  </Reference>
+</References>

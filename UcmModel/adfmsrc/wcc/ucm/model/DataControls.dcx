@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration" version="12.2.1.9.14" id="DataControls"
+                    Package="wcc.ucm.model">
+  <AdapterDataControl id="CheckIn" FactoryClass="oracle.adf.model.adapter.DataControlFactoryImpl"
+                      ImplDef="oracle.adfinternal.model.adapter.webservice.WSDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="false" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true" Definition="wcc.ucm.model.CheckIn"
+                      BeanClass="wcc.ucm.model.CheckIn" xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <Source>
+      <definition xmlns="http://xmlns.oracle.com/adfm/adapter/webservice" name="CheckIn" version="1.0"
+                  provider="oracle.adfinternal.model.adapter.webservice.provider.soap.SOAPProvider"
+                  wsdl="file:/home/masoud/Downloads/CheckIn (1).wsdl" ensureKeyAttribute="true" useWSDLIdentity="true"
+                  dcStructureVersion="2" UsePersistedStructure="false">
+        <service name="CheckIn" namespace="http://www.stellent.com/CheckIn/" connection="CheckIn">
+          <port name="CheckInSoap">
+            <operation name="CheckOutByName"/>
+            <operation name="CheckOut"/>
+            <operation name="CheckInUniversal"/>
+            <operation name="CheckInList"/>
+            <operation name="UndoCheckOut"/>
+            <operation name="UpdateDocInfo"/>
+            <operation name="UndoCheckOutByName"/>
+          </port>
+        </service>
+      </definition>
+    </Source>
+  </AdapterDataControl>
+</DataControlConfigs>

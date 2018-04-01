@@ -1,0 +1,4 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <system systemId="http://wcc:16200/_dav/cs/idcplg/#%7Bhttp%3A%2F%2Fwww.stellent.com%2FDocInfo%2F%7DDocInfo?wsdl"
+          uri="../wcc/ucm/model/docinfo/DocInfo.wsdl"/>
+</catalog>

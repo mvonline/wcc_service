@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle-webservice-clients xmlns:ns0="http://java.sun.com/xml/ns/javaee">
+   <webservice-client>
+      <service-qname namespaceURI="http://www.stellent.com/DocInfo/" localpart="DocInfo"/>
+      <port-info>
+         <wsdl-port namespaceURI="http://www.stellent.com/DocInfo/" localpart="DocInfoSoap"/>
+         <runtime/>
+         <operations>
+            <operation name="docInfoByID"/>
+            <operation name="docInfoByName"/>
+         </operations>
+      </port-info>
+   </webservice-client>
+</oracle-webservice-clients>
